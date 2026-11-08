@@ -1,0 +1,96 @@
+{
+  "base_commit": "19c67f153caf20c4d87408428f90e4e4fd0d9e26",
+  "branch": "main",
+  "origin": "https://github.com/hzopc1031/DSH-Go.git",
+  "first_push": {
+    "exit": 1,
+    "http_status": 403,
+    "error": "Permission to hzopc1031/DSH-Go.git denied to lurnagao-dahua.",
+    "further_pushes": 0
+  },
+  "runs": {
+    "_r1_remote_test.jsonl": {
+      "passed": 471,
+      "failed": 4,
+      "skipped": 4,
+      "success": false,
+      "errors": [
+        {
+          "test": "configuration is awaited and preference is captured before startup finishes",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 730:44   FakeHostConnection.event\ntest\\support\\fake_remote.dart 675:17   FakeHostStream._close\ntest\\support\\fake_remote.dart 1144:49  FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        },
+        {
+          "test": "connectHost + DshClient over the tunnel activation uses fresh descriptor null, never stale host listing",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 730:44   FakeHostConnection.event\ntest\\support\\fake_remote.dart 675:17   FakeHostStream._close\ntest\\support\\fake_remote.dart 1144:49  FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        },
+        {
+          "test": "invalid transferred frame is refused and its Host allocation is released",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 730:44   FakeHostConnection.event\ntest\\support\\fake_remote.dart 675:17   FakeHostStream._close\ntest\\support\\fake_remote.dart 1144:49  FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        },
+        {
+          "test": "connectHost + DshClient over the tunnel large prompts and responses use chunked transfers",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 1084:20  FakeRemoteHost._onMessage.respond\ntest\\support\\fake_remote.dart 1192:9   FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        }
+      ]
+    },
+    "_r1_remote_baseline_test.jsonl": {
+      "passed": 472,
+      "failed": 2,
+      "skipped": 4,
+      "success": false,
+      "errors": [
+        {
+          "test": "connectHost + DshClient over the tunnel activation uses fresh descriptor 0.2.1-rc.4, never stale host listing",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 730:44   FakeHostConnection.event\ntest\\support\\fake_remote.dart 675:17   FakeHostStream._close\ntest\\support\\fake_remote.dart 1144:49  FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        },
+        {
+          "test": "configuration is awaited and preference is captured before startup finishes",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 730:44   FakeHostConnection.event\ntest\\support\\fake_remote.dart 675:17   FakeHostStream._close\ntest\\support\\fake_remote.dart 1144:49  FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        }
+      ]
+    },
+    "_r1_remote_recheck_test.jsonl": {
+      "passed": 72,
+      "failed": 1,
+      "skipped": 0,
+      "success": false,
+      "errors": [
+        {
+          "test": "connectHost + DshClient over the tunnel activation uses fresh descriptor null, never stale host listing",
+          "error": "Bad state: StreamSink is closed",
+          "stack": "dart:_http                             _WebSocketImpl.add\ntest\\support\\fake_remote.dart 883:12   FakeRemoteHost._sendControl\ntest\\support\\fake_remote.dart 725:14   FakeHostConnection.send\ntest\\support\\fake_remote.dart 730:44   FakeHostConnection.event\ntest\\support\\fake_remote.dart 675:17   FakeHostStream._close\ntest\\support\\fake_remote.dart 1144:49  FakeRemoteHost._onMessage\ntest\\support\\fake_remote.dart 1028:11  FakeRemoteHost._receiveRelay\ntest\\support\\fake_remote.dart 982:15   FakeRemoteHost._onControl\ntest\\support\\fake_remote.dart 849:17   FakeRemoteHost.goOnline.<fn>\n"
+        }
+      ]
+    },
+    "_r1_remote_targeted_test.jsonl": {
+      "passed": 28,
+      "failed": 0,
+      "skipped": 0,
+      "success": true,
+      "errors": []
+    },
+    "_r1_app_final_test.jsonl": {
+      "passed": 63,
+      "failed": 0,
+      "skipped": 0,
+      "success": true,
+      "errors": []
+    }
+  },
+  "analysis": {
+    "remote_dart_analyze": 0,
+    "app_dart_analyze": 0,
+    "app_flutter_analyze": 255,
+    "l10n_check": 0,
+    "guide_check": 1
+  },
+  "ios_deliverable": false,
+  "full_app_rerun": false,
+  "dsh_client_rerun": false
+}

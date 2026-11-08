@@ -20,6 +20,31 @@ import 'network_route.dart';
 /// [direct] (直连优先) lets connections try LAN / P2P / TURN over
 /// [peerConnector] (flutter_webrtc) before the Server's relay.
 class DshRemoteRelayBackend implements RelayBackend, RelayNetworkBackend {
+  /// Remote-only entry point. Never passes null to the legacy public-server
+  /// default, and never enables direct transports. Each instance owns its Host
+  /// directory and approval cache; secrets retain RemoteAccount's origin scope.
+  factory DshRemoteRelayBackend.fromSelection({
+    required remote.RemoteServerSelection selection,
+    required SecretStore secrets,
+    required String deviceName,
+    required String platform,
+    String clientVersion = '0.1.0',
+  }) {
+    final origin = selection.origin;
+    if (origin == null) throw StateError('An explicit server selection is required');
+    return DshRemoteRelayBackend(
+      secrets: secrets,
+      direct: false,
+      account: remote.RemoteAccount(
+        secrets: _Secrets(secrets),
+        serverUrl: origin,
+        deviceName: deviceName,
+        platform: platform,
+        clientVersion: clientVersion,
+      ),
+    );
+  }
+
   DshRemoteRelayBackend({
     required SecretStore secrets,
     Object? serverUrl,

@@ -1,0 +1,637 @@
+{
+  "date": "2026-11-08",
+  "baseCommit": "4ea522239890e7097841b5e2c436b9c6b6178ea5",
+  "platform": "Windows x64",
+  "flutter": "3.47.7",
+  "dart": "3.13.5",
+  "counting": "Non-hidden testDone events; failure and error are both failures; skipped excluded from passes.",
+  "analysis": {
+    "dsh_client": 0,
+    "dsh_remote_before": 0,
+    "dsh_remote_after": 0,
+    "app_flutter_analyze": 255,
+    "app_dart_analyze": 0
+  },
+  "checks": {
+    "l10n_merge_check": 0,
+    "guide_sync_check": 1
+  },
+  "tests": {
+    "client_test": {
+      "workingDirectory": "packages/dsh_client",
+      "command": "dart test --reporter json",
+      "exitCode": 1,
+      "completed": true,
+      "passed": 697,
+      "failed": 2,
+      "skipped": 31,
+      "log": "_baseline_client_test.jsonl",
+      "logSha256": "5600bcdc0d85f96dcf3b27dcce89bfd67ce073023860c9e02a3b695f94e9e54d",
+      "failuresWithPixelDiff": 0,
+      "pixelDiffFailuresByFile": {},
+      "otherFailures": [
+        {
+          "path": "test/dsh_go_heartbeat_test.dart",
+          "test": "healthy control ping/pong does not reconnect a quiet live surface",
+          "firstError": "Bad state: StreamSink is closed"
+        },
+        {
+          "path": "test/session_path_whitespace_test.dart",
+          "test": "an absolute trailing space keeps two existing files distinct",
+          "firstError": "Expected: 'ordinary sibling'"
+        }
+      ]
+    },
+    "client_recheck": {
+      "workingDirectory": "packages/dsh_client",
+      "command": "dart test test/dsh_go_heartbeat_test.dart test/session_path_whitespace_test.dart --reporter json",
+      "exitCode": 1,
+      "completed": true,
+      "passed": 11,
+      "failed": 1,
+      "skipped": 0,
+      "log": "_baseline_client_recheck.jsonl",
+      "logSha256": "7e6cfed6c8aad6945d879b69b9fa6edd8c5d2a677fa4e34b889cd73ccf1749d2",
+      "failuresWithPixelDiff": 0,
+      "pixelDiffFailuresByFile": {},
+      "otherFailures": [
+        {
+          "path": "test/session_path_whitespace_test.dart",
+          "test": "an absolute trailing space keeps two existing files distinct",
+          "firstError": "Expected: 'ordinary sibling'"
+        }
+      ]
+    },
+    "remote_test": {
+      "workingDirectory": "packages/dsh_remote",
+      "command": "dart test --reporter json",
+      "exitCode": 1,
+      "completed": true,
+      "passed": 460,
+      "failed": 2,
+      "skipped": 4,
+      "log": "_baseline_remote_test.jsonl",
+      "logSha256": "c7888d43224c99c025e829090bac25d731493f4868b74b98c1552435b2005878",
+      "failuresWithPixelDiff": 0,
+      "pixelDiffFailuresByFile": {},
+      "otherFailures": [
+        {
+          "path": "test/remote_client_test.dart",
+          "test": "connectHost + DshClient over the tunnel activation uses fresh descriptor 0.2.2-alpha.2, never stale host listing",
+          "firstError": "Bad state: StreamSink is closed"
+        },
+        {
+          "path": "test/remote_client_test.dart",
+          "test": "connectHost + DshClient over the tunnel activation uses fresh descriptor null, never stale host listing",
+          "firstError": "Bad state: StreamSink is closed"
+        }
+      ]
+    },
+    "selection_test": {
+      "workingDirectory": "packages/dsh_remote",
+      "command": "dart test test/server_selection_test.dart test/ipv6_server_url_test.dart test/account_cross_instance_logout_test.dart test/account_refresh_owner_test.dart test/qr_login_cancellation_test.dart --reporter json",
+      "exitCode": 0,
+      "completed": true,
+      "passed": 81,
+      "failed": 0,
+      "skipped": 0,
+      "log": "_baseline_selection_test.jsonl",
+      "logSha256": "680b31e599feee9ddc8dc3e58d4b9ef6be2a0c5edf90fe87819417d6e5c79405",
+      "failuresWithPixelDiff": 0,
+      "pixelDiffFailuresByFile": {},
+      "otherFailures": []
+    },
+    "remote_after_test": {
+      "workingDirectory": "packages/dsh_remote",
+      "command": "dart test --reporter json",
+      "exitCode": 0,
+      "completed": true,
+      "passed": 474,
+      "failed": 0,
+      "skipped": 4,
+      "log": "_baseline_remote_after_test.jsonl",
+      "logSha256": "5200bab824c8b1810796d37793192528cf65128eb6496042f55794da27e182ea",
+      "failuresWithPixelDiff": 0,
+      "pixelDiffFailuresByFile": {},
+      "otherFailures": []
+    },
+    "app_test": {
+      "workingDirectory": "app",
+      "command": "flutter test --no-pub --concurrency=4 --reporter json",
+      "exitCode": 1,
+      "completed": true,
+      "passed": 9147,
+      "failed": 1056,
+      "skipped": 387,
+      "log": "_baseline_app_test.jsonl",
+      "logSha256": "22a92146777cb6ab703a323ee2ec9f9dd4cab5cb3418a9287230936ee1a78149",
+      "failuresWithPixelDiff": 982,
+      "pixelDiffFailuresByFile": {
+        "app/test/access/access_golden_test.dart": 20,
+        "app/test/access/phone_mode_golden_test.dart": 6,
+        "app/test/account/account_golden_test.dart": 18,
+        "app/test/agents/lineage_test.dart": 6,
+        "app/test/agents/team_page_test.dart": 8,
+        "app/test/agents/thinking_translate_test.dart": 4,
+        "app/test/bots/bots_golden_test.dart": 16,
+        "app/test/chat/activity_strip_golden_test.dart": 4,
+        "app/test/chat/artifact_golden_test.dart": 12,
+        "app/test/chat/chat_components_golden_test.dart": 2,
+        "app/test/chat/chat_features_test.dart": 16,
+        "app/test/chat/chat_golden_test.dart": 12,
+        "app/test/chat/chat_shell_test.dart": 2,
+        "app/test/chat/composer_mention_picker_test.dart": 4,
+        "app/test/chat/composer_mention_test.dart": 2,
+        "app/test/chat/composer_voice_test.dart": 2,
+        "app/test/chat/dock/dock_golden_test.dart": 14,
+        "app/test/chat/dsh_ui/dsh_ui_dialect_golden_test.dart": 2,
+        "app/test/chat/dsh_ui/dsh_ui_golden_test.dart": 8,
+        "app/test/chat/empty_actions_test.dart": 6,
+        "app/test/chat/fork_toast_test.dart": 2,
+        "app/test/chat/header_schedule_golden_test.dart": 6,
+        "app/test/chat/markdown_golden_test.dart": 8,
+        "app/test/chat/message_flow_test.dart": 4,
+        "app/test/chat/message_menu_test.dart": 4,
+        "app/test/chat/model_sheet_test.dart": 6,
+        "app/test/chat/plus_panel_test.dart": 8,
+        "app/test/chat/quote_test.dart": 2,
+        "app/test/chat/run_info_golden_test.dart": 16,
+        "app/test/chat/secret_mask_golden_test.dart": 2,
+        "app/test/chat/tool_images_test.dart": 4,
+        "app/test/common/risk_notice_test.dart": 5,
+        "app/test/common/sheet_dismissal_test.dart": 4,
+        "app/test/community/community_page_test.dart": 4,
+        "app/test/cordis/cordis_page_test.dart": 6,
+        "app/test/diagnostics/diagnostics_export_ui_test.dart": 4,
+        "app/test/drawer/drawer_golden_test.dart": 15,
+        "app/test/engine_settings/engine_settings_golden_test.dart": 20,
+        "app/test/features/features_pages_test.dart": 14,
+        "app/test/features/preset_editor_test.dart": 6,
+        "app/test/features/schedule_editor_test.dart": 6,
+        "app/test/features/session_export_test.dart": 2,
+        "app/test/features/skill_use_test.dart": 2,
+        "app/test/files/files_golden_test.dart": 14,
+        "app/test/forum/forum_golden_test.dart": 14,
+        "app/test/icons/app_icons_test.dart": 2,
+        "app/test/integration/wiring_test.dart": 10,
+        "app/test/landscape/landscape_golden_test.dart": 16,
+        "app/test/launch/launch_golden_test.dart": 4,
+        "app/test/media/generate_mode_test.dart": 10,
+        "app/test/media/media_golden_test.dart": 12,
+        "app/test/notify/background_net_test.dart": 4,
+        "app/test/notify/notify_golden_test.dart": 12,
+        "app/test/onboarding/local_chat_golden_test.dart": 4,
+        "app/test/onboarding/local_optional_golden_test.dart": 17,
+        "app/test/onboarding/parallel_setup_golden_test.dart": 16,
+        "app/test/performance/performance_golden_test.dart": 4,
+        "app/test/pets/overlay/overlay_settings_tile_test.dart": 2,
+        "app/test/pets/pet_golden_test.dart": 20,
+        "app/test/pets/pet_parts_test.dart": 3,
+        "app/test/phone/dnd_mode_golden_test.dart": 44,
+        "app/test/phone/phone_floating_bar_test.dart": 4,
+        "app/test/phone/phone_golden_test.dart": 30,
+        "app/test/plugin_config/plugin_config_golden_test.dart": 20,
+        "app/test/plugins/market_official_golden_test.dart": 4,
+        "app/test/plugins/native/chat_plugins_sheet_test.dart": 2,
+        "app/test/plugins/native/native_files_golden_test.dart": 8,
+        "app/test/plugins/native/native_slots_golden_test.dart": 20,
+        "app/test/plugins/plugin_load_status_widget_test.dart": 4,
+        "app/test/plugins/plugin_reload_widget_test.dart": 4,
+        "app/test/plugins/plugins_golden_test.dart": 8,
+        "app/test/plugins/seats/plugin_web_places_test.dart": 2,
+        "app/test/plugins/seats/seats_pages_test.dart": 14,
+        "app/test/plugins/view/plugin_card_fold_test.dart": 2,
+        "app/test/plugins/view/plugin_controls_golden_test.dart": 5,
+        "app/test/plugins/view/plugin_view_app_accent_test.dart": 2,
+        "app/test/plugins/view/plugin_view_figures_test.dart": 5,
+        "app/test/plugins/view/plugin_view_golden_test.dart": 10,
+        "app/test/plugins/view/plugin_view_styles_golden_test.dart": 4,
+        "app/test/providers/provider_model_test.dart": 3,
+        "app/test/providers/providers_golden_test.dart": 24,
+        "app/test/remote/remote_golden_test.dart": 26,
+        "app/test/replay/replay_page_test.dart": 4,
+        "app/test/safe_mode/safe_mode_widgets_test.dart": 6,
+        "app/test/search/session_search_golden_test.dart": 4,
+        "app/test/session/session_detail_test.dart": 10,
+        "app/test/settings/app_icon_picker_test.dart": 2,
+        "app/test/settings/appearance_page_test.dart": 5,
+        "app/test/settings/background_guide_test.dart": 2,
+        "app/test/settings/icon_shortcut_sheet_test.dart": 2,
+        "app/test/settings/launch_screen_section_test.dart": 6,
+        "app/test/settings/search/settings_search_golden_test.dart": 8,
+        "app/test/settings/settings_ia_golden_test.dart": 10,
+        "app/test/settings/settings_overview_remote_test.dart": 2,
+        "app/test/settings/settings_pages_golden_test.dart": 7,
+        "app/test/settings/voice_model_card_test.dart": 9,
+        "app/test/settings/wallpaper_section_test.dart": 4,
+        "app/test/share/share_card_golden_test.dart": 16,
+        "app/test/share/share_panel_test.dart": 7,
+        "app/test/share/share_picker_test.dart": 2,
+        "app/test/share_code/reply_prefs_test.dart": 4,
+        "app/test/share_code/share_code_golden_test.dart": 16,
+        "app/test/share_hosted/hosted_links_page_test.dart": 2,
+        "app/test/shell/adaptive/adaptive_home_test.dart": 8,
+        "app/test/shell/brand_mark_test.dart": 2,
+        "app/test/shell/common_golden_test.dart": 10,
+        "app/test/shell/quick_panel_golden_test.dart": 10,
+        "app/test/shell/shell_golden_test.dart": 26,
+        "app/test/star/star_prompt_test.dart": 2,
+        "app/test/system_entry/launcher_icons_golden_test.dart": 2,
+        "app/test/system_entry/share_landed_golden_test.dart": 2,
+        "app/test/terminal/terminal_golden_test.dart": 14,
+        "app/test/tiles/feature_tile_test.dart": 6,
+        "app/test/tiles/tile_style_picker_test.dart": 2,
+        "app/test/ui_config/widgets_test.dart": 6,
+        "app/test/update/update_golden_test.dart": 10,
+        "app/test/usage/usage_ui_test.dart": 1,
+        "app/test/usage/usage_upgrade_notice_test.dart": 2,
+        "app/test/wallpaper/wallpaper_contrast_test.dart": 4,
+        "app/test/wallpaper/wallpaper_editor_test.dart": 1,
+        "app/test/wallpaper/wallpaper_screens_test.dart": 8,
+        "app/test/web/web_mode_test.dart": 1,
+        "app/test/workspace/workspace_golden_test.dart": 14
+      },
+      "otherFailures": [
+        {
+          "path": "app/test/chat/artifact_path_whitespace_test.dart",
+          "test": "materialization reads the requested file rather than its ordinary sibling",
+          "firstError": "Expected: 'ordinary sibling'"
+        },
+        {
+          "path": "app/test/chat/artifact_download_race_test.dart",
+          "test": "async write failure stays in materialize and leaves its peer alive",
+          "firstError": "TimeoutException after 0:00:30.000000: Test timed out after 30 seconds. See https://pub.dev/packages/test#timeouts"
+        },
+        {
+          "path": "app/test/chat/artifact_download_race_test.dart",
+          "test": "async open failure stays in materialize and leaves its peer alive",
+          "firstError": "TimeoutException after 0:00:30.000000: Test timed out after 30 seconds. See https://pub.dev/packages/test#timeouts"
+        },
+        {
+          "path": "app/test/chat/session_sync_screen_test.dart",
+          "test": "ordinary button is disabled while terminal-follow-error",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/chat/session_sync_screen_test.dart",
+          "test": "ordinary button is disabled while new-mux-ready-snapshot-held",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/chat/session_sync_screen_test.dart",
+          "test": "ordinary double-escape is disabled while terminal-follow-error",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/chat/session_sync_screen_test.dart",
+          "test": "new-session first message stays in composer while waiting; timeout=true",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/diagnostics/diagnostics_bundle_test.dart",
+          "test": "exporter share sends the ZIP to the share sheet",
+          "firstError": "Expected: 'dsh-go-diagnostics-20261024-153012.zip'"
+        },
+        {
+          "path": "app/test/features/preset_composition_test.dart",
+          "test": "standard rendering unchanged keeps the Host text",
+          "firstError": "Expected: '- id: persona\\r\\n'"
+        },
+        {
+          "path": "app/test/launch/launch_import_test.dart",
+          "test": "import a photo: copied into the app, its size, its edge, filling the screen",
+          "firstError": "Expected: ["
+        },
+        {
+          "path": "app/test/launch/launch_read_error_test.dart",
+          "test": "launch read classification: failed",
+          "firstError": "Expected: ["
+        },
+        {
+          "path": "app/test/launch/launch_read_error_test.dart",
+          "test": "launch read classification: cancelled",
+          "firstError": "Expected: ["
+        },
+        {
+          "path": "app/test/launch/launch_read_error_test.dart",
+          "test": "launch read classification: too-large",
+          "firstError": "Expected: ["
+        },
+        {
+          "path": "app/test/launch/launch_read_error_test.dart",
+          "test": "launch read classification: empty-selection",
+          "firstError": "Expected: ["
+        },
+        {
+          "path": "app/test/plugins/sdk_english_diagnostics_test.dart",
+          "test": "live English SDK diagnostic text matches the App parser for the shared corpus",
+          "firstError": "FormatException: Unexpected character (at character 109)"
+        },
+        {
+          "path": "app/test/plugins/view/plugin_view_styles_parity_test.dart",
+          "test": "App and SDK agree on v2 diagnostics and 256 quantised colour corrections",
+          "firstError": "Expected: ["
+        },
+        {
+          "path": "app/test/plugin_config/plugin_config_bridge_test.dart",
+          "test": "scope the package the Host names must be the bundle row's",
+          "firstError": "HttpException: Connection closed while receiving data, uri = /api/credentials/describe"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh starts dsh with the right flags, then reuses it",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh a changed launch command restarts the managed instance",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh finds dsh outside PATH (nvm layout)",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh no dsh anywhere: dshNotFound",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh a crashing dsh reports its log",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh a dsh that never prints its URL times out",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh a stale pid that is not ours is neither reused nor killed",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh legacy node-like unrelated process survives (ps fails: false)",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh legacy node-like unrelated process survives (ps fails: true)",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/remote/remote_bootstrap_test.dart",
+          "test": "scripts against /bin/sh environment overrides reach the scripts (live-test isolation)",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/settings/launch_section_late_result_test.dart",
+          "test": "launch selection success after page pop is owned",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/settings/launch_screen_section_test.dart",
+          "test": "choosing 默认 restores the default and keeps the picture to switch back to",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/settings/launch_screen_section_test.dart",
+          "test": "choosing fit and background are stored as they are picked",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/settings/launch_screen_section_test.dart",
+          "test": "choosing without an edge colour there is no 取自图片",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/settings/third_party_licenses_test.dart",
+          "test": "WebRTC entry exposes the complete upstream asset without truncation",
+          "firstError": "Expected: 'd1f9382c6878ac024155fd6d44a5977329108bb8b0a01cea40e4a2f1d7de252e'"
+        },
+        {
+          "path": "app/test/settings/wallpaper_section_test.dart",
+          "test": "choosing no picture yet: 自定义 picks one; it is chosen and its rows open",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/share_code/replay_viewer_sync_test.dart",
+          "test": "the inlined viewer matches site/share",
+          "firstError": "Expected: 'b077f6745723f92b103f19dad98e86c1d579bb34eeb8c76cea535b5cc62393b6'"
+        },
+        {
+          "path": "app/test/share_code/share_code_sheets_test.dart",
+          "test": "导入配置: switches choose what runs; another engine replans",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/share_code/share_flow_logic_test.dart",
+          "test": "export lists what can travel, with sizes, and builds the share from the ticks",
+          "firstError": "Expected: ['outline', 'quick']"
+        },
+        {
+          "path": "app/test/share_code/share_flow_logic_test.dart",
+          "test": "import the diff: upgrades, installs, switches, presets, settings, files",
+          "firstError": "Expected: ChangeKind:<ChangeKind.change>"
+        },
+        {
+          "path": "app/test/share_code/share_flow_logic_test.dart",
+          "test": "import applies in order, pins a restore point first, backs up replaced files",
+          "firstError": "PathNotFoundException: Cannot open file, path = '<TEMP>/share-guest-e6f6b9ba/rootfs/root/.dsh/backups/share-import-20261024-153012/skills/outline/SKILL.md' (OS Error: 系统找不到指定的路径。, errno = 3)"
+        },
+        {
+          "path": "app/test/share_code/share_content_test.dart",
+          "test": "view instructions and skill files without selecting them; checks stay aligned",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/share_code/skill_import_backup_test.dart",
+          "test": "PNG asset existing directory is not presented as a new skill",
+          "firstError": "Expected: not ChangeKind:<ChangeKind.add>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_backup_test.dart",
+          "test": "PNG asset explicit import preserves original bytes or explicitly refuses replacement",
+          "firstError": "Expected: true"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "normal directory skill preserves BOM bytes before replacement",
+          "firstError": "Expected: ChangeKind:<ChangeKind.change>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_backup_test.dart",
+          "test": "large text asset existing directory is not presented as a new skill",
+          "firstError": "Expected: not ChangeKind:<ChangeKind.add>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "normal flat skill preserves BOM bytes before replacement",
+          "firstError": "Expected: ChangeKind:<ChangeKind.change>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_backup_test.dart",
+          "test": "large text asset explicit import preserves original bytes or explicitly refuses replacement",
+          "firstError": "Expected: true"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "absent skill remains a normal explicit addition",
+          "firstError": "Expected: ChangeKind:<ChangeKind.add>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_backup_test.dart",
+          "test": "hidden regular file existing directory is not presented as a new skill",
+          "firstError": "Expected: not ChangeKind:<ChangeKind.add>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "execution refuses content added after the confirmation plan",
+          "firstError": "Expected: ImportStepState:<ImportStepState.failed>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_backup_test.dart",
+          "test": "hidden regular file explicit import preserves original bytes or explicitly refuses replacement",
+          "firstError": "Expected: true"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "existing backup slot is not overwritten and source stays intact",
+          "firstError": "Expected: ImportStepState:<ImportStepState.failed>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "directory and legacy flat file together are explicitly rejected",
+          "firstError": "Expected: ChangeKind:<ChangeKind.unavailable>"
+        },
+        {
+          "path": "app/test/share_code/skill_import_replacement_controls_test.dart",
+          "test": "a link inside a skill is rejected without following or deleting it",
+          "firstError": "FileSystemException: Cannot create link, path = '<TEMP>/share-guest-3d1e5367/rootfs/root/.dsh/skills/outline/reference.txt' (OS Error: 客户端没有所需的特权。, errno = 1314)"
+        },
+        {
+          "path": "app/test/share_hosted/hosted_crypto_test.dart",
+          "test": "WebCrypto interop what the app seals, WebCrypto and the viewer open",
+          "firstError": "Expected: <0>"
+        },
+        {
+          "path": "app/test/system_entry/system_entry_flow_test.dart",
+          "test": "a lone share-code file goes to the importer, not to a chat",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/system_entry/system_entry_flow_test.dart",
+          "test": "a pet screenshot opens an editable image draft without sending or losing text",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/system_entry/system_entry_flow_test.dart",
+          "test": "a screenshot waiting at startup is attached once when the composer is ready",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/system_entry/system_entry_flow_test.dart",
+          "test": "an unreadable screenshot reports the problem rather than submitting a message",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/system_entry/system_entry_flow_test.dart",
+          "test": "a file opened with the app that nothing claims is attached to 新对话",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/ui_config/guide_skill_test.dart",
+          "test": "the bundle: every asset mapped, both languages page for page, links resolve, SKILL.md managed and last",
+          "firstError": "Expected: '---'"
+        },
+        {
+          "path": "app/test/ui_config/guide_skill_test.dart",
+          "test": "installs the nested folder, repairs a managed copy, leaves a taken-over one alone",
+          "firstError": "Expected: UiSkillInstallResult:<UiSkillInstallResult.userOwned>"
+        },
+        {
+          "path": "app/test/ui_config/plugin_skill_test.dart",
+          "test": "installs into skills/dsh-go-plugin, next to dsh-go-ui, with the same rules",
+          "firstError": "Expected: UiSkillInstallResult:<UiSkillInstallResult.userOwned>"
+        },
+        {
+          "path": "app/test/ui_config/schema_sync_test.dart",
+          "test": "the manifest lists every bundled file and SKILL.md is a valid managed skill",
+          "firstError": "Expected: '---'"
+        },
+        {
+          "path": "app/test/ui_config/local_source_test.dart",
+          "test": "no file yet: creates dsh-go/, reports absent, then follows the file",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/ui_config/skill_install_test.dart",
+          "test": "a SKILL.md without the managed line is the person's: not touched",
+          "firstError": "Expected: UiSkillInstallResult:<UiSkillInstallResult.userOwned>"
+        },
+        {
+          "path": "app/test/ui_config/skill_autoinstall_root_test.dart",
+          "test": "an engine already running at launch gets them too, and a folder the person took over is left alone",
+          "firstError": "Test failed. See exception logs above."
+        },
+        {
+          "path": "app/test/ui_config/skill_install_test.dart",
+          "test": "remote the SSH script writes the skill under $DSH_HOME, byte for byte",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/ui_config/skill_install_test.dart",
+          "test": "remote without DSH_HOME it uses ~/.dsh, and leaves a folder the person took over",
+          "firstError": "ProcessException: 系统找不到指定的文件。 (at ../../../flutter/third_party/dart/runtime/bin/process_win.cc:579)"
+        },
+        {
+          "path": "app/test/ui_config/local_source_test.dart",
+          "test": "a burst of writes settles into one read",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/ui_config/state_test.dart",
+          "test": "the real local wiring follows a file in the rootfs",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/ui_config/local_source_test.dart",
+          "test": "an editor's write-then-rename is picked up",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/ui_config/local_source_test.dart",
+          "test": "before the runtime is installed: noRuntime; afterwards a kick finds the file",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/ui_config/local_source_test.dart",
+          "test": "while an install moves /root around nothing is created or written",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/ui_config/local_source_test.dart",
+          "test": "the folder vanishing (runtime reset) and coming back",
+          "firstError": "TimeoutException: condition not met in 0:00:05.000000"
+        },
+        {
+          "path": "app/test/web/web_mode_test.dart",
+          "test": "the rest of the phone lands in the page a pet screenshot reaches the web composer as an unsent image",
+          "firstError": "Test failed. See exception logs above."
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "App Flutter analyze crashed parsing LSP JSON (Unexpected end of input); same-SDK dart analyze passed.",
+    "Windows rendering/font/Emoji setup differs from CI; no golden was updated. Pixel diff category may coexist with other exceptions.",
+    "Remote baseline had two StreamSink-closed errors; final full run passed without changing those paths. Not claimed fixed.",
+    "Client full baseline had one StreamSink-closed error and one trailing-space path failure; isolated recheck retained only path failure.",
+    "App source unchanged. Non-pixel failures include timers, path separators, file locks/timeouts, text/newline/encoding comparisons, missing sh, generated-file sync and fixtures; see otherFailures.",
+    "Live tests skipped without actual Host/account setup; no real credentials used.",
+    "Server-selection model not wired to App storage/startup/account creation; no iOS build/device or real Server/Host acceptance."
+  ]
+}

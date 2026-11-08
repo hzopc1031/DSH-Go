@@ -63,6 +63,24 @@ await client.close();                                // or account.logout()
 
 ## API surface
 
+### Remote-only server selection (configuration foundation)
+
+`RemoteServerSelection.resolve` parses versioned choices before legacy settings
+and the `DSH_REMOTE_DEFAULT_SERVER_URL` build default. Without a default, a fresh
+installation stays `unconfigured`. Legacy missing/empty server settings become
+`hosted`, requiring confirmation and exposing no connectable origin. Callers must
+supply installation evidence via `hasLegacySettings`; a missing key alone is
+ambiguous. Explicit saved origins remain explicit, including the public origin.
+Only `selfHosted` exposes an HTTPS origin. Invalid records throw `FormatException`
+without falling back or echoing rejected addresses. Persist `toJson()` only after
+successful parsing, retaining invalid old input for correction.
+
+This model performs no storage or account operations and is not yet wired into
+the Flutter app. Callers must gate account creation on a non-null origin, pass it
+explicitly to `RemoteAccount`, and retain origin/operation ownership checks when
+switching accounts. Existing `RemoteAccount` defaults and Android behavior remain
+unchanged; passing null to that constructor still selects its hosted default.
+
 ### `RemoteAccount`: one account on one Server
 
 | Member | Notes |

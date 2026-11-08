@@ -41,6 +41,7 @@ export 'src/crypto/noise_ik.dart'
 export 'src/protocol/control.dart' show ControlFrame, ControlFrameLimits, ProtocolError, protocolVersion;
 export 'src/protocol/messages.dart' show RemoteMessage, SecureMessageCodec, maxSecureMessageBytes;
 export 'src/server/server_api.dart';
+export 'src/server/server_selection.dart';
 export 'src/state.dart';
 export 'src/transport/peer_connection.dart';
 export 'src/transport/relay_transport.dart';

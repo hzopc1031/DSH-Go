@@ -1,0 +1,241 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-11-08T05:43:22.952800+00:00",
+  "mode": "public-download",
+  "packages": [
+    {
+      "name": "ds-harness-remote",
+      "version": "0.6.3",
+      "tarball": "https://registry.npmjs.org/ds-harness-remote/-/ds-harness-remote-0.6.3.tgz",
+      "integrity": "sha512-gJHzDpU80WSV/JtVfevKjkR+4EcMUZ+zN40AmRbqkPrLD/95V1GVYDS803yAk4N8iw9uk6nfG+mDzN5vhuS3ig==",
+      "integrityVerified": true,
+      "sha256": "eca4ded731d15488c9992cdfb1e0f3ffa0ca392cb2f08da894187481bd6db3ad",
+      "gitHead": "bd0eadeb98b47b74b7b56924091a5a7429762d41",
+      "license": "MIT",
+      "engines": null,
+      "bin": {
+        "ds-harness-remote": "./bin/ds-harness-remote.js"
+      },
+      "markers": {
+        "harness.remote.v3": [
+          {
+            "file": "package/dist/client-capabilities.js",
+            "line": 36
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 70299
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 99224
+          },
+          {
+            "file": "package/dist/service.js",
+            "line": 383
+          }
+        ],
+        "harness.transport.describe": [
+          {
+            "file": "package/dist/client-capabilities.js",
+            "line": 21
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 64595
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 70287
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 81952
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 96226
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 96337
+          },
+          {
+            "file": "package/dist/remote-typert-gateway.js",
+            "line": 108
+          },
+          {
+            "file": "package/dist/rpc-router.js",
+            "line": 9
+          },
+          {
+            "file": "package/dist/rpc-router.js",
+            "line": 139
+          }
+        ],
+        "transport.relay.attach": [
+          {
+            "file": "package/dist/index.js",
+            "line": 69362
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 96742
+          },
+          {
+            "file": "package/dist/server-connection.js",
+            "line": 175
+          },
+          {
+            "file": "package/dist/server-connection.js",
+            "line": 176
+          }
+        ],
+        "harnessSessionGeneration": [
+          {
+            "file": "package/dist/client-runtime.js",
+            "line": 12
+          },
+          {
+            "file": "package/dist/client-runtime.js",
+            "line": 546
+          },
+          {
+            "file": "package/dist/client-runtime.js",
+            "line": 773
+          },
+          {
+            "file": "package/dist/client-runtime.js",
+            "line": 814
+          },
+          {
+            "file": "package/dist/harness-remote-bridge.js",
+            "line": 9
+          },
+          {
+            "file": "package/dist/harness-remote-bridge.js",
+            "line": 983
+          },
+          {
+            "file": "package/dist/harness-version.js",
+            "line": 18
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 81641
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 86511
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 86724
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 86767
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 98642
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 98879
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 98913
+          },
+          {
+            "file": "package/dist/index.js",
+            "line": 99224
+          },
+          {
+            "file": "package/dist/service.js",
+            "line": 7
+          },
+          {
+            "file": "package/dist/service.js",
+            "line": 68
+          },
+          {
+            "file": "package/dist/service.js",
+            "line": 80
+          },
+          {
+            "file": "package/dist/service.js",
+            "line": 383
+          },
+          {
+            "file": "package/dist/harness-version.d.ts",
+            "line": 8
+          }
+        ],
+        "dsh plugin --profile web add -w": [
+          {
+            "file": "package/README.md",
+            "line": 61
+          }
+        ],
+        "/api/v1/auth/login": [
+          {
+            "file": "package/dist/index.js",
+            "line": 83981
+          },
+          {
+            "file": "package/dist/server-api.js",
+            "line": 67
+          }
+        ]
+      }
+    },
+    {
+      "name": "@deepseek-ai/dsh",
+      "version": "0.2.2-rc.1",
+      "tarball": "https://registry.npmjs.org/@deepseek-ai/dsh/-/dsh-0.2.2-rc.1.tgz",
+      "integrity": "sha512-ijR9UEVYkG15Q/Q79JzvzLBzQOQfc63VLr9n6flpwHPhr5IKn2UxthnSoto/P9l7qGd7pPvI1Ra6TW7LH3oKpg==",
+      "integrityVerified": true,
+      "sha256": "ad21968aed0337a326b853507a23b30eacbbec4d67ab07f3b6fde69b75b19cd6",
+      "gitHead": null,
+      "license": "MIT",
+      "engines": {
+        "node": ">=24.9.0"
+      },
+      "bin": {
+        "dsh": "lib/bin.js"
+      },
+      "markers": {
+        "harness.remote.v3": [],
+        "harness.transport.describe": [],
+        "transport.relay.attach": [],
+        "harnessSessionGeneration": [],
+        "dsh plugin --profile web add -w": [],
+        "/api/v1/auth/login": []
+      }
+    }
+  ],
+  "runtimeCompatibility": "NOT_RUN",
+  "iosBuild": "NOT_RUN",
+  "serverImageDigest": null,
+  "server": {
+    "commit": "8f905b53d195a2c1ae29913d90eaacd40addeda9",
+    "source": "https://codeload.github.com/liguobao/ds-harness-remote/tar.gz/8f905b53d195a2c1ae29913d90eaacd40addeda9",
+    "sha256": "0832aad10e439ad6c8a77a24860b614ac583fb5ba67062e2857ef753b5c431ce",
+    "version": "0.5.21",
+    "transportDeclaration": [
+      "const SUPPORTED_TRANSPORTS = ['transport.lan', 'transport.p2p', 'transport.turn', 'transport.relay'] as const"
+    ],
+    "markers": {
+      "/api/v1/auth/login": [
+        {
+          "file": "ds-harness-remote-8f905b53d195a2c1ae29913d90eaacd40addeda9/apps/server/src/server.ts",
+          "line": 237
+        }
+      ],
+      "relay.frame": [],
+      "relay.attach": []
+    }
+  }
+}
